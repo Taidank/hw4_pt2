@@ -1,0 +1,101 @@
+/* <!--
+File: style.css
+GUI Assignment: Hw4pt2  Multiplication Table
+Tai Dao, UMass Lowell Managament Information System Major, tai_dao@student.uml.edu
+
+css file to style my webpage and the items inside
+Through this file it has styling for my background, buttons, and multiplication table
+Also helps with centering my content
+
+added a slider css
+
+Copyright (c) 2025 by Tai Dao. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by Tai on October 1, 2025 at 10:00 PM
+
+
+image source:
+
+https://unsplash.com/photos/a-blurry-photo-of-a-plane-flying-in-the-sky-oPH_5xuMgQw
+-->*/
+
+/*setting the background of the body to the gradient jpg*/
+body {
+    background-image: url("../pictures/magicpattern-oPH_5xuMgQw-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Button sizing*/
+button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Style ONLY the error message text */
+label.error {
+    background-color: #ffecec;
+    color: #a2d32f;
+    margin-left: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    display: block;
+    padding: 4px 8px;
+}
+
+/*centering the form from bootstrap*/
+form {
+    margin: 0 auto;
+    max-width: 500px;
+    padding-top: 50px;
+}
+
+/*border styling around the form*/
+.border {
+    justify-content: center;
+    border: 1px solid black;
+}
+
+/*Giving the multiplcation borders around the table*/
+#multiplicationtable {
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+/*Each data and table header gets it own border to create the grid effect*/
+#multiplicationtable th,
+#multiplicationtable td {
+    border: 1px solid black;
+    padding: 6px;
+    text-align: center;
+}
+
+/*Multiplcation table too big allow user to scroll*/
+#table {
+    overflow: scroll;
+}
+
+/*bootstrapp column shrinking and centering them to align in the middle of the page*/
+.col-sm-4 {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
+
+/*every odd data in the table is blueish*/
+td:nth-child(odd) {
+    background-color: rgba(15, 125, 214, 0.6);
+    color: black;
+}
+
+/*every even data in the table is green*/
+td:nth-child(even) {
+    background-color: rgba(127, 150, 190, 0.6);
+    color: black;
+}
+/*adjusted slider size to be the same as text box*/
+.slider {
+    margin: 10px 0;
+    width: 139%;
+}
+

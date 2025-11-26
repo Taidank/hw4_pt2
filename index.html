@@ -1,0 +1,95 @@
+<!--
+File: index.html
+GUI Assignment: HW4pt2 Multiplication Table
+Tai Dao, UMass Lowell Managament Information System Major, tai_dao@student.uml.edu
+
+Website Description: User input website utilizing a form with jquerey validation to create a multiplication table.
+added sliders and UI feature of tabs. So now sliders will change input numbers and can save each table in a tab if you want to 
+reference back
+
+
+Sources: 
+https://www.w3schools.com/html/
+https://getbootstrap.com/docs/4.4/components/forms/
+https://getbootstrap.com/docs/4.0/components/buttons/
+https://jesseheines.com/~heines/91.461/91.461-2015-16f/461-assn/jQueryUI1.8_Ch03_TabsWidget.pdf
+https://jesseheines.com/~heines/91.461/91.461-2015-16f/461-assn/jQueryUI1.8_Ch06_SliderWidget.pdf
+https://jesseheines.com/~heines/91.461/91.461-2015-16f/461-assn/jQueryUI1.8_Ch06_SliderWidget.pdf
+https://www.youtube.com/watch?v=3Bv0LJIYIuQ&list=PLoRtamOf788jbs_rDbMYaTkQvkIwAcGFy
+https://releases.jquery.com/ui/
+
+Copyright (c) 2025 by Dao. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by Tai on November 26, 2025 at 5:49PM
+-->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HW3 Multiplcation Table</title>
+    <!--custom jqeuerey ui theme cdn-->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/le-frog/jquery-ui.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css\style.css">
+
+</head>
+
+<body>
+    <!--Creating a bootstrap container to hold all the content-->
+    <div class="container">
+        <div id="tabs" class="mt-3">
+            <ul>
+                <li><a href="#tab-form">Tabs</a></li>
+            </ul>
+            <div id="tab-form">
+                <form class="multForm" name="multForm">
+                    <div class="border">
+                        <fieldset class="compact-fieldset text-start">
+                            <!--Make columns take up 4 spaces on all sizes-->
+                            <div class="col-sm-4">
+                                <!--top numbers of the table-->
+                                <legend>Top Numbers</legend>
+                                <!--Input text box and sliders-->
+                                <input type="text" id="Beginning1" name="Beginning1" placeholder="">
+                                <div id="Beginning1_slider" class="slider"></div>
+                                <input type="text" id="Ending1" name="Ending1" placeholder="">
+                                <div id="Ending1_slider" class="slider"></div>
+                            </div>
+                            <br>
+                            <div class="col-sm-4">
+                                <!--side numbers of the table-->
+                                <legend>Side Numbers</legend>
+                                <!--Input text box and sliders-->
+                                <input type="text" id="Beginning2" name="Beginning2" placeholder="">
+                                <div id="Beginning2_slider" class="slider"></div>
+                                <input type="text" id="Ending2" name="Ending2" placeholder="">
+                                <div id="Ending2_slider" class="slider"></div>
+                            </div>
+                            <div class="text-center">
+                                <button type="save" class="btn btn-outline-primary btn-sm">Submit</button>
+                            </div>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br>
+        <!--section for the table to be able to print-->
+        <div id='table'>
+            <table id="multiplicationtable">
+            </table>
+        </div>
+    </div>
+    <!--loading in all our javascript and jquerey-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="js\script.js"></script>
+</body>
+
+</html>
